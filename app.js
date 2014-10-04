@@ -1,9 +1,11 @@
+// without express. not working yet.
+
+
 var http = require("http");
 var socketio = require("socket.io");
 var fs = require("fs");
 var mkdirp = require('mkdirp');
-var getImg
-;var app = require('express')();
+var getImg;var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
@@ -38,7 +40,7 @@ var io = socketio.listen(server);
 
  
  var watcher = chokidar.watch('./uploads', {ignored: /[\/\\]\./, persistent:true});
-watcher.on('change', function(path) {
+watcher.on('add', function(path) {
     
     getImg = path; 
     console.log('File', getImg, 'has been added');
