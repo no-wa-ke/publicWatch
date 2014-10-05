@@ -1,0 +1,30 @@
+body{
+	width:100%;
+
+}
+
+#imgContainer{
+width:100%;
+
+}
+
+.appended{
+width:100%;
+height:auto;
+margin:10px auto 10px auto;
+
+text-align: center;
+}
+
+/*.appended img{
+max-width:100%;
+heght:auto;
+margin:10px auto 10px auto;
+
+}*/
+
+
+img{
+max-width: 80%;
+
+}
