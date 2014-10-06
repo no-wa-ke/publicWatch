@@ -36,9 +36,9 @@ s.on("removeImg", function(data) { // erase only removed ones.
 })
 
 
-function removerImage (){
+function removerImage (){ // function for counter
 
-        for (var i = 0; i < counter.length; i++) {
+        for (var i = 0; i < 50; i++) {
             $(".counter" + i).remove();
         }
         counter = 0;
@@ -48,28 +48,26 @@ function removerImage (){
 
 /* //chat app
 
-  //クライアントからイベント送信（イベント名は自由に設定できます）
   function sendMessage() {
-    var msg = $("#message").val(); //取得
+    var msg = $("#message").val(); //get
     $("#message").val(""); //空白にする
-    s.emit("C_to_S_message", {value:msg}); //サーバへ送信
+    s.emit("C_to_S_message", {value:msg}); 
   }
  
   function sendBroadcast() {
-    var msg = $("#message").val(); //取得
+    var msg = $("#message").val(); //get
     $("#message").val(""); //空白にする
-    s.emit("C_to_S_broadcast", {value:msg}); // サーバへ送信
+    s.emit("C_to_S_broadcast", {value:msg}); 
   }
  
-  //jqueryでメッセージを追加
+
   function addMessage (value,color,size) {
-    var msg = value.replace( /[!@$%<>'"&|]/g, '' ); //タグ記号とかいくつか削除
+    var msg = value.replace( /[!@$%<>'"&|]/g, '' ); 
     $("#msg_list").prepend("<div class='msg'>" + msg + "</div>");
     // $("#imgContainer").append('<img src=' + img + "/>") 
   }    
   
   function duplicaDetect(element){
-
 
 }
 

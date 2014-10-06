@@ -2,10 +2,8 @@ var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var p = require('path');
-// socket = io.connect(server,{'forceNew': true });
-// chokidar 
+ 
 var getImg;
-
 var chokidar = require('chokidar');
 
 server.listen(80);
@@ -28,7 +26,6 @@ on('add', function(path) {
     div = "photo-" + div;
     _style ="appended";
 
-    //div = div.replace('.jpg','');// so client-side can access public folder
     console.log('File', path, 'has been added');
     
     // io.sockets.emit("toImg",{src:path,string:div,style:_style}); // global broadcast
