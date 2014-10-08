@@ -1,7 +1,9 @@
 var counter = 0;
 
-//  var s = io.connect(); //remote
-var s = io.connect('http://10.0.1.2'); //local
+ var s = io.connect(); //remote
+// var s = io.connect('http://10.0.1.2'); //local home
+// var s = io.connect('http://10.0.1.2'); //local school
+
 
 s.on("available_channnel",function(channels){
   console.log(channels);
