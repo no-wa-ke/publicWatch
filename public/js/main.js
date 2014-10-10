@@ -1,5 +1,5 @@
 var counter = 0;
-var audio = new Audio('media/apple_newmail.mp3');
+// var audio = new Audio('media/apple_newmail.mp3');
  var s = io.connect(); //remote
 // var s = io.connect('http://10.0.1.2'); //local home
 // var s = io.connect('http://10.0.1.2'); //local school
@@ -30,7 +30,7 @@ s.on("toImg", function(data) { //append uploaded contents
    
     }
 
-    audio.play();
+    // audio.play();
 
 
 })
